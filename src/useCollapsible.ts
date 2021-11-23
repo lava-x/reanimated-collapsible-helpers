@@ -9,7 +9,9 @@ const { Clock, Value } = Animated;
 
 export function useCollapsible(config?: Config) {
   const [height, setHeight] = React.useState(0);
-  const [state, setState] = React.useState<State>(config?.initialState || 'collapsed');
+  const [state, setState] = React.useState<State>(
+    config?.initialState || 'collapsed'
+  );
 
   const { current: clock } = React.useRef(new Clock());
   const { current: progress } = React.useRef(new Value<number>(0));
