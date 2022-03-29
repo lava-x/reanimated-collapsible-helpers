@@ -4,6 +4,6 @@ export type State = 'expanded' | 'collapsed';
 
 export type Config = {
   duration?: number;
-  easing?: Animated.EasingNodeFunction;
+  easing?: Animated.EasingFunction;
   initialState?: State;
 };
